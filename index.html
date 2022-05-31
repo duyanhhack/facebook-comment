@@ -5,29 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comment Facebook Plugin</title>
-    <!-- <meta property="fb:app_id" content="538404384583742" /> -->
-    <meta property="fb:admins" content="100027791181989" />
+    <meta property="fb:app_id" content="538404384583742" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.youtube.com/watch?v=nUUGBbFomC4" />
+    <meta property="og:title" content="Test comment" />
+    <meta property="og:description" content="Comment use facebook plugin" />
+    <meta property="og:image" content="URL_IMAGE" />
+    <meta property="og:locale" content="vi_VN" />
+
+    <script>
+      (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, "script", "facebook-jssdk"));
+  </script>
 </head>
 <body>
     <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '538404384583742',
-            xfbml      : true,
-            version    : 'v14.0'
-          });
-          FB.AppEvents.logPageView();
-        };
-      
-        (function(d, s, id){
-           var js, fjs = d.getElementsByTagName(s)[0];
-           if (d.getElementById(id)) {return;}
-           js = d.createElement(s); js.id = id;
-           js.src = "https://connect.facebook.net/en_US/sdk.js";
-           fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));
-      </script>
 
     <div class="fb-comments" data-href="https://www.youtube.com/watch?v=nUUGBbFomC4" data-width="" data-numposts="5"></div>
 </body>
