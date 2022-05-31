@@ -12,7 +12,7 @@
     <meta property="og:image" content="URL_IMAGE" />
     <meta property="og:locale" content="vi_VN" />
 
-    <script>
+    <!-- <script>
       (function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
@@ -21,11 +21,33 @@
           js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
           fjs.parentNode.insertBefore(js, fjs);
       }(document, "script", "facebook-jssdk"));
-  </script>
+  </script> -->
 </head>
 <body>
-    <div id="fb-root"></div>
+  <div id="fb-root"></div>
 
-    <div class="fb-comments" data-href="https://duyanhhack.github.io/facebook-comment/" data-width="" data-numposts="5"></div>
+  <div class="fb-comments" data-href="https://duyanhhack.github.io/facebook-comment/" data-width="" data-numposts="5"></div>
+
+  <script>
+    const initFacebook = () => {
+      const script = document.createElement('script')
+
+      script.innerHTML = `
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, "script", "facebook-jssdk"));
+      `
+
+      document.head.appendChild(script)
+    }
+
+    initFacebook()
+  </script>
+  
 </body>
 </html>
