@@ -5,49 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comment Facebook Plugin</title>
-    <meta property="fb:app_id" content="538404384583742" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Test comment" />
-    <meta property="og:description" content="Comment use facebook plugin" />
-    <meta property="og:image" content="URL_IMAGE" />
-    <meta property="og:locale" content="vi_VN" />
-
-    <!-- <script>
-      (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
-          fjs.parentNode.insertBefore(js, fjs);
-      }(document, "script", "facebook-jssdk"));
-  </script> -->
 </head>
 <body>
-  <div id="fb-root"></div>
-
-  <div class="fb-comments" data-href="https://duyanhhack.github.io/facebook-comment/" data-width="" data-numposts="5"></div>
+  <a href="./first-page.html">đến trang 1</a>
+  <a href="./second-page.html">đến trang 2</a>
 
   <script>
-    const initFacebook = () => {
-      const script = document.createElement('script')
-
-      script.innerHTML = `
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, "script", "facebook-jssdk"));
-      `
-
-      document.head.appendChild(script)
-    }
-
-    initFacebook()
+    const url = location.href
+    console.log(url)
   </script>
-  
 </body>
 </html>
